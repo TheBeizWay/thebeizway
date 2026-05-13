@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Purav Mehta & Beiz - TheBeizWay">
+    <title>About Me | TheBeizWay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 5% 4rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .about-text {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 2rem 5%;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+
+        a:focus {
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="thebeizway_logo_refined.png" alt="TheBeizWay Logo" class="logo"></a>
+        <nav class="nav-links" role="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="index.html#qualifications">Qualifications</a>
+            <a href="index.html#work">The Work</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>About Me</h1>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm Purav Mehta, a Chartered Accountant and graduate of the Australian Institute of Company Directors (GAICD). My journey bridges the traditional worlds of finance and risk management with the cutting edge of data science and AI automation.</p>
+                
+                <p>With extensive experience in financial modeling, statistical analysis, and strategic decision-making, I've developed a unique perspective on how technology can transform business operations. I specialize in building intelligent automation workflows using tools like n8n, creating data-driven solutions that make complex processes simple and efficient.</p>
+                
+                <p>But life isn't just about numbers and code. Meet Beiz (pronounced BAYZ) - my Border Collie and constant companion. Beiz reminds me daily about the importance of balance, resilience, and finding joy in both work and play. Whether we're tackling new challenges or exploring new trails, Beiz embodies the adaptability and focus that I bring to every project.</p>
+                
+                <p>My mission is simple: bridge the gap between traditional business practices and modern technology, creating solutions that are both powerful and accessible to everyone.</p>
+            </div>
+
+            <div class="photo-grid">
+                <img src="beiz.jpeg" alt="Beiz the Border Collie">
+                <img src="pura&beiz.jpeg" alt="Purav and Beiz">
+                <img src="purav.jpeg" alt="Purav Mehta">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TheBeizWay. All rights reserved.</p>
+    </footer>
+</body>
+</html>
