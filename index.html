@@ -62,6 +62,7 @@
       display: flex;
       align-items: center;
       gap: 1.2rem;
+      text-decoration: none;
     }
     .logo {
       height: 90px;
@@ -120,6 +121,45 @@
     .nav-links button:hover::after {
       width: 80%;
     }
+
+    /* ========== SOCIAL ICONS IN HEADER ========== */
+    .social-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .social-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .social-icon {
+      font-size: 1.8rem;
+      transition: all 0.3s;
+    }
+    .social-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      opacity: 0.95;
+      color: #ffffff;
+    }
+    .social-link.github .social-icon { color: #7c3aed; }
+    .social-link.github .social-label { color: #7c3aed; }
+    .social-link.github:hover .social-icon { color: #a78bfa; transform: rotate(90deg) scale(1.1); }
+    .social-link.n8n .social-icon { color: #e63946; }
+    .social-link.n8n .social-label { color: #e63946; }
+    .social-link.n8n:hover .social-icon { color: #ff8f7f; transform: scale(1.15); }
+    .social-link.linkedin .social-icon { color: #0077b5; }
+    .social-link.linkedin .social-label { color: #0077b5; }
+    .social-link.linkedin:hover .social-icon { color: #00a0dc; transform: scale(1.15); }
+    .social-link.whatsapp .social-icon { color: #25D366; }
+    .social-link.whatsapp .social-label { color: #25D366; }
+    .social-link.whatsapp:hover .social-icon { color: #128C7E; transform: scale(1.15); }
 
     /* ========== PROJECTS OVERLAY ========== */
     .projects-overlay {
@@ -539,6 +579,12 @@
         grid-template-columns: 1fr;
         width: 90%;
       }
+      .social-links {
+        gap: 1rem;
+      }
+      .social-label {
+        font-size: 0.65rem;
+      }
     }
 
     /* ========== ACCESSIBILITY ========== */
@@ -573,7 +619,7 @@
 
   <!-- ==================== HEADER ==================== -->
   <header>
-    <a href="index.html" class="logo-container" style="text-decoration:none;">
+    <a href="index.html" class="logo-container">
       <img src="thebeizway_logo_refined.png" alt="TheBeizWay Logo" class="logo">
       <div class="logo-text">THEBEIZWAY</div>
     </a>
@@ -583,6 +629,24 @@
       <button id="openProjectsOverlay" aria-haspopup="dialog">My Work</button>
       <a href="#mindset">Mindset</a>
     </nav>
+    <div class="social-links">
+      <a href="https://github.com/TheBeizWay" target="_blank" class="social-link github">
+        <span class="social-icon">⚙</span>
+        <span class="social-label">GITHUB</span>
+      </a>
+      <a href="https://n8n.io" target="_blank" class="social-link n8n">
+        <span class="social-icon">🔗</span>
+        <span class="social-label">N8N</span>
+      </a>
+      <a href="https://www.linkedin.com/in/puravmehtaca/" target="_blank" class="social-link linkedin">
+        <span class="social-icon">💼</span>
+        <span class="social-label">LINKEDIN</span>
+      </a>
+      <a href="https://wa.me/61433029542?text=Hi%20Purav" target="_blank" class="social-link whatsapp">
+        <span class="social-icon">💬</span>
+        <span class="social-label">WHATSAPP</span>
+      </a>
+    </div>
   </header>
 
   <main>
