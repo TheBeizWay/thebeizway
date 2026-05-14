@@ -1,16 +1,22 @@
-## Hi there 👋
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/TheBeizWay/thebeizway-site/main/thebeizway_logo_refined.png" width="120" alt="TheBeizWay Logo"><br>
+  Purav Mehta — CA & GAICD
+</h1>
 
-<!--
-**TheBeizWay/thebeizway** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="center">
+  Finance × Risk × Data × AI Automation<br>
+  <a href="https://thebeizway.com.au">thebeizway.com.au</a>
+</p>
 
-Here are some ideas to get you started:
+<p align="center">
+  <a href="https://www.linkedin.com/in/puravmehtaca/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077b5?style=for-the-badge&logo=linkedin">
+  </a>
+  <a href="mailto:purav.mehta90@gmail.com">
+    <img src="https://img.shields.io/badge/Email-00d4ff?style=for-the-badge&logo=gmail">
+  </a>
+</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+Chartered Accountant & GAICD — building at the intersection of finance, risk, data, and AI.
