@@ -1,6 +1,3 @@
-About · HTML
-Copy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,114 +13,130 @@ Copy
         }
  
         :root {
-            --bg-dark: #0a0a0a;
-            --bg-card: #1a1a1a;
+            --bg-dark: #0a0e27;
+            --bg-card: #151b3d;
             --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --accent-primary: #3b82f6;
-            --accent-secondary: #8b5cf6;
+            --text-secondary: #b8c5d6;
+            --accent-primary: #00d4ff;
+            --accent-secondary: #0066ff;
+            --accent-tertiary: #a855f7;
+            --accent-gold: #fbbf24;
         }
  
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--bg-dark);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
             color: var(--text-primary);
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+ 
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
         }
  
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem 5%;
+            background: rgba(10, 14, 39, 0.9);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
         }
  
-        .logo {
-            height: 50px;
-            width: auto;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            text-decoration: none;
+        }
+ 
+        .logo { height: 60px; width: auto; }
+ 
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
  
         .nav-links {
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
  
         .nav-links a {
             color: var(--text-primary);
             text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
             transition: color 0.3s;
         }
  
-        .nav-links a:hover {
-            color: var(--accent-primary);
-        }
+        .nav-links a:hover { color: var(--accent-primary); }
  
         main {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 8rem 5% 4rem;
+            padding: 8rem 5% 5rem;
+            position: relative;
+            z-index: 1;
         }
  
         h1 {
             font-size: 3rem;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            font-weight: 900;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
  
         h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
+            font-weight: 800;
             margin: 3rem 0 1.5rem;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
  
-        .about-content {
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+            align-items: start;
         }
  
         .about-text {
             color: var(--text-secondary);
             font-size: 1.1rem;
-            line-height: 1.8;
+            line-height: 1.9;
         }
  
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
+        .about-text p { margin-bottom: 1.5rem; }
  
         .about-text .highlight {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
- 
-        .why-section {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin-bottom: 4rem;
-        }
- 
-        .why-section p {
-            margin-bottom: 1.5rem;
-        }
- 
-        .why-section .highlight {
             color: var(--text-primary);
             font-weight: 600;
         }
@@ -136,82 +149,174 @@ Copy
  
         .photo-grid img {
             width: 100%;
-            max-width: 300px;
+            max-width: 320px;
             height: auto;
-            border-radius: 12px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s;
+            border-radius: 16px;
+            border: 2px solid rgba(0, 212, 255, 0.2);
+            transition: transform 0.3s, border-color 0.3s;
+            display: block;
+            margin: 0 auto;
         }
  
         .photo-grid img:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
+            border-color: var(--accent-primary);
         }
  
         .divider {
             border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(0, 212, 255, 0.15);
             margin: 3rem 0;
         }
  
+        .why-section {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.9;
+            max-width: 800px;
+        }
+ 
+        .why-section p { margin-bottom: 1.5rem; }
+ 
+        .why-section .highlight {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+ 
+        .timeline-wrap {
+            position: relative;
+            padding-left: 2.5rem;
+            max-width: 750px;
+        }
+ 
+        .timeline-line {
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            bottom: 12px;
+            width: 2px;
+            background: rgba(0, 212, 255, 0.25);
+        }
+ 
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+ 
+        .timeline-item:last-child { margin-bottom: 0; }
+ 
+        .timeline-dot {
+            position: absolute;
+            left: -2.1rem;
+            top: 14px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #0a0e27;
+        }
+ 
+        .timeline-card {
+            background: linear-gradient(135deg, rgba(21, 27, 61, 0.8), rgba(10, 14, 39, 0.8));
+            border-radius: 16px;
+            padding: 1.2rem 1.5rem;
+            border: 1px solid rgba(0, 212, 255, 0.15);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+ 
+        .timeline-card:hover {
+            transform: translateX(6px);
+            border-color: rgba(0, 212, 255, 0.4);
+        }
+ 
+        .timeline-card.active { border-color: #00d4ff; }
+ 
+        .timeline-year {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+ 
+        .timeline-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+ 
+        .timeline-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+ 
+        .badge {
+            display: inline-block;
+            margin-top: 0.6rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+ 
         footer {
-            padding: 2rem 5%;
+            padding: 2.5rem 5%;
             text-align: center;
             color: var(--text-secondary);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            position: relative;
+            z-index: 1;
         }
  
         @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
- 
-            h1 {
-                font-size: 2rem;
-            }
- 
-            h2 {
-                font-size: 1.4rem;
-            }
- 
-            .nav-links {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
+            .about-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .logo-text { font-size: 1.2rem; }
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.85rem; padding: 0.4rem 0.3rem; }
         }
  
         a:focus {
-            outline: 2px solid var(--accent-primary);
-            outline-offset: 2px;
+            outline: 3px solid var(--accent-primary);
+            outline-offset: 3px;
         }
     </style>
 </head>
 <body>
+ 
     <header>
-        <a href="index.html"><img src="thebeizway_logo_refined.png" alt="TheBeizWay Logo" class="logo"></a>
-        <nav class="nav-links" role="navigation">
+        <a href="index.html" class="logo-container">
+            <img src="thebeizway_logo_refined.png" alt="TheBeizWay Logo" class="logo">
+            <div class="logo-text">THEBEIZWAY</div>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
-           <a href="index.html#work">My Work</a>
-        <a href="mindset.html">Mindset</a>
+            <a href="index.html#work">My Work</a>
+            <a href="mindset.html">Mindset</a>
         </nav>
     </header>
  
     <main>
         <h1>About Me</h1>
  
-        <div class="about-content">
+        <div class="about-grid">
             <div class="about-text">
-                <p>I'm <span class="highlight">Purav Mehta</span> — Chartered Accountant (CA ANZ), Graduate of the Australian Institute of Company Directors (GAICD), and currently deep in a Master of Data Science and AI. On paper, that looks like a neat progression. In reality, it's been anything but.</p>
+                <p>I'm <span class="highlight">Purav Mehta</span> — Chartered Accountant (CA ANZ), Graduate of the Australian Institute of Company Directors (GAICD), and currently deep in a Master of Data Science. On paper that looks like a neat progression. In reality it's been anything but.</p>
  
-                <p>Growing up, I stuttered. Still do sometimes. In rooms where confidence is measured by how smoothly words come out, that's not a small thing. I was bullied for it in my school. I was underestimated for it in life and interviews. And somewhere along the way, I made a decision — if I couldn't always win the room with words, I'd win it with preparation, with work, with results that spoke louder than I could.</p>
+                <p>Growing up, I stuttered. Still do sometimes. In rooms where confidence is measured by how smoothly words come out, that's not a small thing. I was bullied for it. I was underestimated for it. And somewhere along the way I made a decision — if I couldn't always win the room with words, I'd win it with preparation, with work, with results that spoke louder than I could.</p>
  
-                <p>That stubbornness became a career. I've built financial models, automated workflows that used to take teams days, and turned raw, messy data into decisions that actually moved things. I specialise in the space where traditional finance and risk thinking meet modern data science and AI automation — n8n, Power BI, Python, the whole stack. Not because it's trendy, but because it genuinely makes complex things simple and that matters to the people I work with.</p>
+                <p>That stubbornness became a career. I've built financial models, automated workflows that used to take teams days, turned raw messy data into decisions that actually moved things. I specialise in the space where traditional finance and risk thinking meets modern data science and AI automation. Not because it's trendy, but because it genuinely makes complex things simple and that matters to the people I work with.</p>
  
                 <p>But none of that explains TheBeizWay without introducing Beiz.</p>
  
-                <p>Beiz (Pronounced as BAYZ) is my Border Collie. Every single day that dog wakes up ready, focused, relentless, joyful, and completely unbothered by yesterday. No ego. No excuses. Just pure work ethic wrapped in fur. I learn from Beiz constantly. The resilience. The adaptability. The way he attacks a problem, whether it's herding, a new trail, or just getting my attention with everything he has.</p>
+                <p>Beiz is my Border Collie. Named after me, or maybe I named myself after the better version. Every single day that dog wakes up ready. Focused, relentless, joyful, and completely unbothered by yesterday. No ego. No excuses. Just pure work ethic wrapped in fur. I learn from Beiz constantly. The resilience. The adaptability. The way she attacks a problem with everything she has.</p>
  
-                <p>That's what I'm building here. The Beiz Way. The idea that you show up, you do the work, you don't let the hard stuff define you, you let it sharpen you. Whether I'm running marathons, finishing a data science project & AI at midnight, or sitting with a difficult problem at work, the mindset is the same.</p>
+                <p>That's what I'm building here. The idea that you show up, you do the work, you don't let the hard stuff define you — you let it sharpen you. Whether I'm running marathons, finishing a data science project at midnight, or sitting with a difficult problem at work, the mindset is the same.</p>
  
                 <p><span class="highlight">Refuse to give up. Keep moving. Be more like Beiz.</span></p>
             </div>
@@ -226,16 +331,75 @@ Copy
         <hr class="divider">
  
         <h2>Why This Website Exists</h2>
- 
         <div class="why-section">
             <p>Honestly? Because every CV I've ever read, including my own, reads like AI slop. Bullet points that could belong to anyone. Achievements scrubbed clean of personality. A carefully managed version of a person that tells you almost nothing about who they actually are or how they actually think.</p>
  
             <p>I'm not great at interviews. The stutter doesn't help. The nerves don't help. The formats that reward smooth talkers over deep thinkers don't help. So I stopped trying to compete on that playing field and built my own.</p>
  
-            <p>This site is my real CV. Not what I claim to do — <span class="highlight">what I actually do</span>. Every project here is something I built, broke, fixed, and learned from. Every piece of writing is how I actually think. You get to see the work before you ever have to sit across a table from me and ask me to describe myself in three words.</p>
+            <p>This site is my real CV. Not what I claim to do — <span class="highlight">what I actually do</span>. Every project here is something I built, broke, fixed, and learned from. Every piece of writing is how I actually think. You get to see the work before you ever have to sit across a table from me.</p>
  
-            <p>If you're a hiring manager or a potential client reading this, this is me being more useful to you than any interview could be. <span class="highlight">Judge the work. The rest will follow.</span></p>
+            <p>If you're a hiring manager or a potential client reading this — this is me being more useful to you than any interview could be. <span class="highlight">Judge the work. The rest will follow.</span></p>
         </div>
+ 
+        <hr class="divider">
+ 
+        <h2>Education &amp; Certifications</h2>
+ 
+        <div class="timeline-wrap">
+            <div class="timeline-line"></div>
+ 
+            <div class="timeline-item">
+                <div class="timeline-dot" style="border: 2px solid #a855f7;"></div>
+                <div class="timeline-card">
+                    <div class="timeline-year" style="color:#a855f7;">2012</div>
+                    <h3>Bachelor of Business and Commerce</h3>
+                    <p>CQUniversity Australia</p>
+                    <span class="badge" style="background:rgba(168,85,247,0.15); color:#a855f7;">Completed</span>
+                </div>
+            </div>
+ 
+            <div class="timeline-item">
+                <div class="timeline-dot" style="border: 2px solid #1D9E75;"></div>
+                <div class="timeline-card">
+                    <div class="timeline-year" style="color:#1D9E75;">2024</div>
+                    <h3>Chartered Accountant (CA ANZ)</h3>
+                    <p>Chartered Accountants Australia and New Zealand</p>
+                    <span class="badge" style="background:rgba(29,158,117,0.15); color:#1D9E75;">Completed</span>
+                </div>
+            </div>
+ 
+            <div class="timeline-item">
+                <div class="timeline-dot" style="border: 2px solid #D85A30;"></div>
+                <div class="timeline-card">
+                    <div class="timeline-year" style="color:#D85A30;">2026</div>
+                    <h3>Graduate, Australian Institute of Company Directors</h3>
+                    <p>GAICD</p>
+                    <span class="badge" style="background:rgba(216,90,48,0.15); color:#D85A30;">Completed</span>
+                </div>
+            </div>
+ 
+            <div class="timeline-item">
+                <div class="timeline-dot" style="border: 2px solid #fbbf24;"></div>
+                <div class="timeline-card">
+                    <div class="timeline-year" style="color:#fbbf24;">In progress</div>
+                    <h3>AI &amp; Automation</h3>
+                    <p>Building intelligent workflows with N8N. Automating real business processes end to end.</p>
+                    <span class="badge" style="background:rgba(251,191,36,0.15); color:#fbbf24;">Active</span>
+                </div>
+            </div>
+ 
+            <div class="timeline-item">
+                <div class="timeline-dot" style="border: 2px solid #00d4ff;"></div>
+                <div class="timeline-card active">
+                    <div class="timeline-year" style="color:#00d4ff;">In progress</div>
+                    <h3>Master of Data Science</h3>
+                    <p>University of Canberra</p>
+                    <span class="badge" style="background:rgba(0,212,255,0.15); color:#00d4ff;">Active</span>
+                </div>
+            </div>
+ 
+        </div>
+ 
     </main>
  
     <footer>
