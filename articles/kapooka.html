@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Kapooka Days — 72 days of Australian Army boot camp, a stutter, and refusing to give up. By Purav Mehta.">
+    <title>The Kapooka Days | TheBeizWay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        :root {
+            --bg-dark: #0a0e27;
+            --text-primary: #ffffff;
+            --text-secondary: #b8c5d6;
+            --accent-primary: #00d4ff;
+            --accent-tertiary: #a855f7;
+            --accent-gold: #fbbf24;
+        }
+ 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+ 
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.07) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.07) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+ 
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.9);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        }
+ 
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            text-decoration: none;
+        }
+ 
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+ 
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+ 
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+ 
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+ 
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+ 
+        /* ARTICLE */
+        .article-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 10rem 5% 6rem;
+            position: relative;
+            z-index: 1;
+        }
+ 
+        .back-link {
+            display: inline-block;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 2.5rem;
+            transition: opacity 0.3s;
+        }
+ 
+        .back-link:hover {
+            opacity: 0.7;
+        }
+ 
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+ 
+        .article-wrapper h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 2.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+ 
+        .article-body {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            line-height: 1.95;
+        }
+ 
+        .article-body p {
+            margin-bottom: 1.8rem;
+        }
+ 
+        .article-body .emphasis {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+ 
+        .article-body .gold {
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+ 
+        .pull-quote {
+            border-left: 4px solid var(--accent-primary);
+            padding: 1rem 1.5rem;
+            margin: 2.5rem 0;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-style: italic;
+            font-weight: 500;
+            background: rgba(0, 212, 255, 0.05);
+            border-radius: 0 12px 12px 0;
+        }
+ 
+        .closing-line {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+ 
+        /* FOOTER */
+        footer {
+            padding: 2.5rem 5%;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+ 
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .article-wrapper h1 {
+                font-size: 2rem;
+            }
+ 
+            .article-body {
+                font-size: 1rem;
+            }
+ 
+            .logo-text {
+                font-size: 1.2rem;
+            }
+ 
+            .nav-links {
+                gap: 1rem;
+            }
+ 
+            .nav-links a {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.5rem;
+            }
+        }
+ 
+        a:focus {
+            outline: 3px solid var(--accent-primary);
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <header>
+        <a href="../index.html" class="logo-container">
+            <img src="../thebeizway_logo_refined.png" alt="TheBeizWay Logo" class="logo">
+            <div class="logo-text">THEBEIZWAY</div>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About Me</a>
+            <a href="../index.html#work">My Work</a>
+            <a href="../mindset.html">Mindset</a>
+        </nav>
+    </header>
+ 
+    <main>
+        <div class="article-wrapper">
+ 
+            <a href="../mindset.html" class="back-link">← Back to Mindset</a>
+ 
+            <div class="article-meta">May 2026 &nbsp;·&nbsp; Resilience</div>
+ 
+            <h1>The Kapooka Days</h1>
+ 
+            <div class="article-body">
+ 
+                <p>It was 2017. Peak Australian summer. I was at <span class="emphasis">Kapooka — the Australian Army Recruit Training Centre</span> — and I had 72 days ahead of me that I hadn't fully prepared for. Nobody fully prepares for Kapooka. You think you do. You don't.</p>
+ 
+                <p>The heat was relentless. The days started before the sun came up and ended long after it went down. Every single day someone was pushing you — physically, mentally, emotionally — to find out what you were actually made of. Most of the time I wasn't sure I was made of enough.</p>
+ 
+                <p>And then there was the stutter.</p>
+ 
+                <p>I've stuttered my whole life. In normal life you find workarounds — you pause, you rephrase, you take a breath. At Kapooka there are no workarounds. When a corporal screams at you and demands a response, you respond. Immediately. Clearly. Loudly. My stutter got worse under that pressure, not better. Words that usually came out rough came out worse. And people noticed.</p>
+ 
+                <div class="pull-quote">
+                    "People made fun of me. That's the honest truth. Not everyone — but some. And when you're already exhausted and pushed to your limit, that stuff lands differently."
+                </div>
+ 
+                <p>I cried. I'm not ashamed to say that. There were nights where I lay in my bunk asking myself why I'd done this. What I was trying to prove. Whether any of it was worth it. I thought about quitting more than once. The option was always there.</p>
+ 
+                <p>But here's what kept me going. I had one image in my head. Just one. <span class="emphasis">Me, finishing. Me, walking out of Kapooka having done it.</span> Not a promotion. Not a medal. Not anyone's approval. Just the simple fact of finishing something that was hard. That image was the only thing I held onto on the worst days.</p>
+ 
+                <p>So I changed what I could control. When I couldn't control the heat, I controlled my preparation. When I couldn't control the stutter, I controlled my effort. When I couldn't control what people said, I controlled whether I showed up the next morning. And I always showed up.</p>
+ 
+                <div class="pull-quote">
+                    "72 days later, I walked out. Not the loudest. Not the fastest. But I walked out."
+                </div>
+ 
+                <p>Here's what Kapooka actually taught me — and I mean really taught me, not the kind of lesson you put on a LinkedIn post:</p>
+ 
+                <p><span class="gold">You will feel like giving up.</span> In work. In relationships. In life. There will be moments where everything in you says stop. That feeling is not a sign you're weak. It's a sign you're in the middle of something hard. The middle always feels like failure. It's not.</p>
+ 
+                <p>When you hit that wall — <span class="emphasis">don't give up, change your strategy.</span> Reflect on what's working and what isn't. Adapt. The goal doesn't have to change. The path to it can. Life is not a fairytale and it never will be. But things can get better if you decide you want to make them better.</p>
+ 
+                <p>You need a bit of luck along the way. Everyone does. But your mindset is the only thing that puts you in a position where luck can actually find you. You can't control when the door opens. You can control whether you're still standing in front of it when it does.</p>
+ 
+                <p class="closing-line">I survived Kapooka with a stutter, in peak Australian summer, at 72 days.<br>Whatever you're facing right now — you can survive that too.<br><br>Keep going. Change the strategy if you need to. But keep going.</p>
+ 
+            </div>
+        </div>
+    </main>
+ 
+    <footer>
+        <p>&copy; <span id="currentYear"></span> TheBeizWay. All rights reserved.</p>
+    </footer>
+ 
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+ 
+</body>
+</html>
