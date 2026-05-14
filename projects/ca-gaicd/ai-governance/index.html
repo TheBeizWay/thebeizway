@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Real AI governance lessons from building n8n agents. Prompt injection, credential leaks, and how to not get fired.">
-  <title>Best Practices in AI Governance | TheBeizWay</title>
+  <meta name="description" content="Real AI governance lessons from building n8n agents.">
+  <title>AI Governance Best Practices | TheBeizWay</title>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     :root {
@@ -43,10 +43,22 @@
     .nav-links a:hover { color:var(--accent-primary); }
 
     .article-container { max-width:850px; margin:0 auto; padding:2rem 5% 5rem; }
-    .article-header { text-align:center; margin-bottom:3rem; }
-    .article-header h1 { font-size:2.8rem; background:linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .article-meta { color:var(--text-secondary); font-size:1rem; margin-top:0.5rem; }
-    .article-quote { font-style:italic; font-size:1.4rem; text-align:center; color:var(--accent-gold); margin:2rem 0; font-weight:600; }
+    .article-header { text-align:center; margin-bottom:1.5rem; }
+    .article-header h1 { font-size:2.5rem; background:linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .article-meta { color:var(--text-secondary); font-size:0.95rem; margin-top:0.3rem; }
+    .article-summary { font-size:1.1rem; font-weight:600; color:var(--text-primary); text-align:center; max-width:700px; margin:1.5rem auto; line-height:1.6; }
+    .article-quote { font-style:italic; font-size:1.3rem; text-align:center; color:var(--accent-gold); margin:1.5rem 0; font-weight:600; }
+
+    .what-you-gain {
+      background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(168,85,247,0.08));
+      border:2px solid rgba(0,212,255,0.25);
+      border-radius:var(--radius);
+      padding:2rem;
+      margin:2rem 0;
+    }
+    .what-you-gain h2 { font-size:1.8rem; background:linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:1rem; }
+    .what-you-gain ul { list-style:none; padding-left:0; }
+    .what-you-gain li { margin:0.5rem 0; color:var(--text-secondary); font-size:1.05rem; }
 
     .toc {
       background: linear-gradient(135deg, rgba(21,27,61,0.6), rgba(10,14,39,0.6));
@@ -121,10 +133,25 @@
     <article>
       <div class="article-header">
         <h1>Best Practices in AI Governance: What They Don't Tell You About Building AI Agents</h1>
-        <p class="article-meta">Purav Mehta · CA/GAICD Learning Log · May 2026</p>
+        <p class="article-meta">Purav Mehta · May 2026</p>
+      </div>
+
+      <div class="article-summary">
+        This isn't another generic "AI is the future" post. I'm going to walk you through the specific, dangerous ways AI agents fail — prompt injection, leaked keys, runaway loops and exactly how to stop them
       </div>
 
       <div class="article-quote">"If your AI agent doesn't have an audit trail, it isn't an asset; it's a liability."</div>
+
+      <div class="what-you-gain">
+        <h2>After reading, you'll know:</h2>
+        <ul>
+          <li>✅ What prompt injection really looks like and how to block it</li>
+          <li>✅ How to secure API keys and avoid a $2,000 surprise bill</li>
+          <li>✅ Why "human-in-the-loop" isn't optional for any real business</li>
+          <li>✅ How a governance failure could tank a company (case study inside)</li>
+          <li>✅ What recruiters and boards actually want to hear about AI risk</li>
+        </ul>
+      </div>
 
       <nav class="toc">
         <h2>Table of Contents</h2>
@@ -133,14 +160,13 @@
           <li><a href="#deep-dive">2. Interactive Deep Dives (Click to Expand)</a></li>
           <li><a href="#case-study">3. Case Study: The ASX 100 "Investor Relations" Meltdown</a></li>
           <li><a href="#conclusion">4. Conclusion: Stop Building Chatbots, Start Building Systems</a></li>
-          <li><a href="#credit">5. Course Credit & Further Reading</a></li>
+          <li><a href="#credit">5. Course Credit</a></li>
         </ul>
       </nav>
 
-      <!-- INTRO -->
       <section id="intro">
         <p>Everyone is jumping on the AI agent bandwagon—n8n, LangChain, CrewAI. But while the "builders" are obsessed with tokens and speed, the "governors" are worried about the fallout. I recently finished the LinkedIn Learning course <strong>Build AI Agents with n8n</strong>. It's a solid start, but it doesn't scream loud enough about the fiduciary risk of letting an LLM make decisions for your business.</p>
-        <p>Here is my take on what you actually need to prioritize to build agents that won't get you fired (or sued).</p>
+        <p>Here is my take on what you actually need to prioritise to build agents.</p>
 
         <h2>🛑 The "Table of Doom": Specific Technical Risks</h2>
         <p>Most AI risk articles are fluff ("bias," "hallucinations"). As professionals, we need to look at the mechanical failures.</p>
@@ -154,7 +180,6 @@
         </table>
       </section>
 
-      <!-- INTERACTIVE DEEP DIVES -->
       <section id="deep-dive">
         <h2>📂 Interactive Deep Dives (Click to Expand)</h2>
 
@@ -183,7 +208,6 @@
         </details>
       </section>
 
-      <!-- CASE STUDY -->
       <section id="case-study">
         <h2>📉 Case Study: The ASX 100 "Investor Relations" Meltdown</h2>
         <p><em>A hypothetical look at what happens when Governance fails at scale.</em></p>
@@ -223,7 +247,6 @@
         </details>
       </section>
 
-      <!-- CONCLUSION -->
       <section id="conclusion">
         <h2>🛡️ Conclusion: Stop Building Chatbots, Start Building Systems</h2>
         <p>If you want to be worth "the big money" in the AI era, stop showing people how your bot can write a poem. Show them:</p>
@@ -234,7 +257,6 @@
         </ul>
       </section>
 
-      <!-- COURSE CREDIT -->
       <section id="credit" class="callout">
         <h2>📚 Course Credit & Further Reading</h2>
         <p>This framework was inspired by the LinkedIn Learning course: <strong>"Build AI Agents with n8n"</strong>. If you're building in this space, start with the basics, but build for the Boardroom, not just the Chatroom.</p>
