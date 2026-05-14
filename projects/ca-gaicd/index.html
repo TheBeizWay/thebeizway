@@ -4,75 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CA & GAICD | TheBeizWay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --bg-dark: #0a0e27;
-      --bg-card: #151b3d;
-      --text-primary: #ffffff;
-      --text-secondary: #b8c5d6;
+      --text-primary: #e8e8f0;
+      --text-secondary: #888;
+      --accent-gold: #f59e0b;
       --accent-primary: #00d4ff;
-      --accent-secondary: #0066ff;
-      --accent-tertiary: #a855f7;
-      --accent-gold: #fbbf24;
       --radius: 12px;
     }
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+      background: #0a0a0f;
       color: var(--text-primary);
-      line-height: 1.6;
-      padding-top: 120px; /* space for fixed header */
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      padding-top: 100px; /* space for fixed back link */
     }
-    a { color: var(--accent-primary); text-decoration:none; }
-
-    header {
-      position: fixed; top:0; width:100%; background: rgba(10,14,39,0.9);
-      backdrop-filter: blur(20px); padding:1.2rem 5%;
-      display:flex; justify-content:space-between; align-items:center;
-      z-index:1000; border-bottom:1px solid rgba(0,212,255,0.2);
-      box-shadow:0 4px 30px rgba(0,0,0,0.3);
+    .back-link {
+      position: fixed;
+      top: 1.5rem;
+      left: 1.5rem;
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      z-index: 100;
     }
-    .logo-container { display:flex; align-items:center; gap:1rem; text-decoration:none; }
-    .logo { height:50px; }
-    .logo-text { font-size:1.6rem; font-weight:900;
-      background:linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .nav-links { display:flex; gap:1.5rem; }
-    .nav-links a { color:var(--text-primary); font-weight:500; transition:color 0.3s; }
-    .nav-links a:hover { color:var(--accent-primary); }
+    .back-link:hover { color: #fbbf24; }
 
-    .page-container { max-width:900px; margin:0 auto; padding:3rem 5% 5rem; }
-
-    /* Page header – no centering, just top-aligned */
-    .page-header { margin-bottom:4rem; }
-    .page-header h1 {
-      font-size: 3rem;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.5rem;
+    /* -------- Animated header section (like the original placeholder) -------- */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4rem;
     }
-    .page-header .subtitle {
-      font-size: 1.8rem;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
+    .badge {
+      background: rgba(245,158,11,0.12);
+      border: 1px solid rgba(245,158,11,0.3);
+      color: var(--accent-gold);
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #e8e8f0, var(--accent-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    .page-header p {
+    .subtitle {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(135deg, var(--accent-gold), #e8e8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .description {
       color: var(--text-secondary);
       font-size: 1.1rem;
-      max-width: 700px;
+      max-width: 550px;
       line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .dots {
+      margin-bottom: 2rem;
+    }
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      margin: 0 0.3rem;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    .dot:nth-child(2) { animation-delay: 0.3s; }
+    .dot:nth-child(3) { animation-delay: 0.6s; }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
     }
 
-    /* Article cards grid */
+    /* -------- Article cards (styled like your main site) -------- */
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .article-card {
       background: linear-gradient(135deg, rgba(21,27,61,0.8), rgba(10,14,39,0.8));
@@ -83,22 +126,25 @@
       transition: all 0.4s;
       display: block;
       text-decoration: none;
-      color: var(--text-primary);
+      color: #ffffff;
+      text-align: left;
     }
     .article-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 15px 40px rgba(0,212,255,0.3);
-      border-color: var(--accent-primary);
+      border-color: #00d4ff;
     }
     .article-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 1.5rem;
       margin-bottom: 0.8rem;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background: linear-gradient(135deg, #00d4ff, #0066ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     .article-card p {
-      color: var(--text-secondary);
+      color: #b8c5d6;
       font-size: 0.95rem;
       line-height: 1.5;
     }
@@ -108,46 +154,42 @@
       margin-top: 1rem;
     }
 
-    footer { text-align:center; padding:2rem; color:var(--text-secondary); border-top:1px solid rgba(0,212,255,0.2); margin-top:3rem; }
+    footer {
+      margin-top: 4rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
 
-    @media (max-width:768px) {
-      .page-header h1 { font-size: 2.2rem; }
-      .page-header .subtitle { font-size: 1.4rem; }
+    @media (max-width: 768px) {
+      body { padding-top: 80px; }
+      h1 { font-size: 2.2rem; }
+      .subtitle { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="../../index.html" class="logo-container">
-      <img src="../../thebeizway_logo_refined.png" alt="TheBeizWay Logo" class="logo">
-      <div class="logo-text">THEBEIZWAY</div>
+  <a class="back-link" href="../../index.html">← TheBeizWay</a>
+
+  <!-- Animated header (same spirit as the old placeholder) -->
+  <div class="hero">
+    <span class="badge">CA &amp; GAICD</span>
+    <h1>CA &amp; GAICD</h1>
+    <div class="subtitle">Governance &amp; Finance Insights</div>
+    <p class="description">Real-world perspectives from the boardroom and the balance sheet — where accounting rigour meets governance thinking. Articles and projects from a CA and AICD graduate who sits at both tables.</p>
+    <div class="dots">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </div>
+
+  <!-- Article card grid -->
+  <div class="articles-grid">
+    <a href="ai-governance/index.html" class="article-card">
+      <h3>AI Governance Best Practices</h3>
+      <p>What they don't tell you about building AI agents — prompt injection, leaked keys, and the messy reality.</p>
+      <div class="meta">May 2026 · 8 min read</div>
     </a>
-    <nav class="nav-links">
-      <a href="../../index.html">Home</a>
-      <a href="../../about.html">About Me</a>
-      <a href="../../index.html#work">My Work</a>
-      <a href="../../index.html#mindset">Mindset</a>
-    </nav>
-  </header>
-
-  <main class="page-container">
-    <div class="page-header">
-      <h1>CA &amp; GAICD</h1>
-      <div class="subtitle">Governance &amp; Finance Insights</div>
-      <p>Real-world perspectives from the boardroom and the balance sheet — where accounting rigour meets governance thinking. Articles and projects from a CA and AICD graduate who sits at both tables.</p>
-    </div>
-
-    <div class="articles-grid">
-      <!-- Article card: AI Governance -->
-      <a href="ai-governance/index.html" class="article-card">
-        <h3>AI Governance Best Practices</h3>
-        <p>What they don't tell you about building AI agents — prompt injection, leaked keys, and the messy reality.</p>
-        <div class="meta">May 2026 · 8 min read</div>
-      </a>
-
-      <!-- ADD FUTURE ARTICLES HERE -->
-    </div>
-  </main>
+    <!-- Future articles: copy the a.card block above -->
+  </div>
 
   <footer>
     <p>&copy; <span id="year"></span> TheBeizWay. All views are my own.</p>
