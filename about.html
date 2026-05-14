@@ -1,3 +1,6 @@
+About · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+ 
         :root {
             --bg-dark: #0a0a0a;
             --bg-card: #1a1a1a;
@@ -20,14 +23,14 @@
             --accent-primary: #3b82f6;
             --accent-secondary: #8b5cf6;
         }
-
+ 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-primary);
             line-height: 1.6;
         }
-
+ 
         header {
             position: fixed;
             top: 0;
@@ -41,33 +44,33 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+ 
         .logo {
             height: 50px;
             width: auto;
         }
-
+ 
         .nav-links {
             display: flex;
             gap: 2rem;
         }
-
+ 
         .nav-links a {
             color: var(--text-primary);
             text-decoration: none;
             transition: color 0.3s;
         }
-
+ 
         .nav-links a:hover {
             color: var(--accent-primary);
         }
-
+ 
         main {
             max-width: 1200px;
             margin: 0 auto;
             padding: 8rem 5% 4rem;
         }
-
+ 
         h1 {
             font-size: 3rem;
             margin-bottom: 2rem;
@@ -76,30 +79,61 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
+ 
+        h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+ 
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             margin-bottom: 3rem;
         }
-
+ 
         .about-text {
             color: var(--text-secondary);
             font-size: 1.1rem;
             line-height: 1.8;
         }
-
+ 
         .about-text p {
             margin-bottom: 1.5rem;
         }
-
+ 
+        .about-text .highlight {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+ 
+        .why-section {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-bottom: 4rem;
+        }
+ 
+        .why-section p {
+            margin-bottom: 1.5rem;
+        }
+ 
+        .why-section .highlight {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+ 
         .photo-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1.5rem;
         }
-
+ 
         .photo-grid img {
             width: 100%;
             max-width: 300px;
@@ -108,33 +142,43 @@
             border: 2px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s;
         }
-
+ 
         .photo-grid img:hover {
             transform: scale(1.05);
         }
-
+ 
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 3rem 0;
+        }
+ 
         footer {
             padding: 2rem 5%;
             text-align: center;
             color: var(--text-secondary);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+ 
         @media (max-width: 768px) {
             .about-content {
                 grid-template-columns: 1fr;
             }
-
+ 
             h1 {
                 font-size: 2rem;
             }
-
+ 
+            h2 {
+                font-size: 1.4rem;
+            }
+ 
             .nav-links {
                 flex-wrap: wrap;
                 gap: 1rem;
             }
         }
-
+ 
         a:focus {
             outline: 2px solid var(--accent-primary);
             outline-offset: 2px;
@@ -151,31 +195,55 @@
             <a href="index.html#work">The Work</a>
         </nav>
     </header>
-
+ 
     <main>
         <h1>About Me</h1>
-        
+ 
         <div class="about-content">
             <div class="about-text">
-                <p>I'm Purav Mehta, a Chartered Accountant and graduate of the Australian Institute of Company Directors (GAICD). My journey bridges the traditional worlds of finance and risk management with the cutting edge of data science and AI automation.</p>
-                
-                <p>With extensive experience in financial modeling, statistical analysis, and strategic decision-making, I've developed a unique perspective on how technology can transform business operations. I specialize in building intelligent automation workflows using tools like n8n, creating data-driven solutions that make complex processes simple and efficient.</p>
-                
-                <p>But life isn't just about numbers and code. Meet Beiz (pronounced BAYZ) - my Border Collie and constant companion. Beiz reminds me daily about the importance of balance, resilience, and finding joy in both work and play. Whether we're tackling new challenges or exploring new trails, Beiz embodies the adaptability and focus that I bring to every project.</p>
-                
-                <p>My mission is simple: bridge the gap between traditional business practices and modern technology, creating solutions that are both powerful and accessible to everyone.</p>
+                <p>I'm <span class="highlight">Purav Mehta</span> — Chartered Accountant (CA ANZ), Graduate of the Australian Institute of Company Directors (GAICD), and currently deep in a Master of Data Science and AI. On paper, that looks like a neat progression. In reality, it's been anything but.</p>
+ 
+                <p>Growing up, I stuttered. Still do sometimes. In rooms where confidence is measured by how smoothly words come out, that's not a small thing. I was bullied for it in my school. I was underestimated for it in life and interviews. And somewhere along the way, I made a decision — if I couldn't always win the room with words, I'd win it with preparation, with work, with results that spoke louder than I could.</p>
+ 
+                <p>That stubbornness became a career. I've built financial models, automated workflows that used to take teams days, and turned raw, messy data into decisions that actually moved things. I specialise in the space where traditional finance and risk thinking meet modern data science and AI automation — n8n, Power BI, Python, the whole stack. Not because it's trendy, but because it genuinely makes complex things simple and that matters to the people I work with.</p>
+ 
+                <p>But none of that explains TheBeizWay without introducing Beiz.</p>
+ 
+                <p>Beiz (Pronounced as BAYZ) is my Border Collie. Every single day that dog wakes up ready, focused, relentless, joyful, and completely unbothered by yesterday. No ego. No excuses. Just pure work ethic wrapped in fur. I learn from Beiz constantly. The resilience. The adaptability. The way he attacks a problem, whether it's herding, a new trail, or just getting my attention with everything he has.</p>
+ 
+                <p>That's what I'm building here. The Beiz Way. The idea that you show up, you do the work, you don't let the hard stuff define you, you let it sharpen you. Whether I'm running marathons, finishing a data science project & AI at midnight, or sitting with a difficult problem at work, the mindset is the same.</p>
+ 
+                <p><span class="highlight">Refuse to give up. Keep moving. Be more like Beiz.</span></p>
             </div>
-
+ 
             <div class="photo-grid">
                 <img src="beiz.jpeg" alt="Beiz the Border Collie">
                 <img src="pura&beiz.jpeg" alt="Purav and Beiz">
                 <img src="purav.jpeg" alt="Purav Mehta">
             </div>
         </div>
+ 
+        <hr class="divider">
+ 
+        <h2>Why This Website Exists</h2>
+ 
+        <div class="why-section">
+            <p>Honestly? Because every CV I've ever read, including my own, reads like AI slop. Bullet points that could belong to anyone. Achievements scrubbed clean of personality. A carefully managed version of a person that tells you almost nothing about who they actually are or how they actually think.</p>
+ 
+            <p>I'm not great at interviews. The stutter doesn't help. The nerves don't help. The formats that reward smooth talkers over deep thinkers don't help. So I stopped trying to compete on that playing field and built my own.</p>
+ 
+            <p>This site is my real CV. Not what I claim to do — <span class="highlight">what I actually do</span>. Every project here is something I built, broke, fixed, and learned from. Every piece of writing is how I actually think. You get to see the work before you ever have to sit across a table from me and ask me to describe myself in three words.</p>
+ 
+            <p>If you're a hiring manager or a potential client reading this, this is me being more useful to you than any interview could be. <span class="highlight">Judge the work. The rest will follow.</span></p>
+        </div>
     </main>
-
+ 
     <footer>
-        <p>&copy; 2025 TheBeizWay. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> TheBeizWay. All rights reserved.</p>
     </footer>
+ 
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
