@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Articles | TheBeizWay</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Articles | TheBeizWay</title><meta name="description" content="Writing by Purav Mehta CA GAICD on finance, risk, data, AI, governance and resilience.">
+<link rel="icon" href="/favicon_io/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #0a0a0f; color: #e8e8f0; font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
-.back { position: fixed; top: 1.5rem; left: 1.5rem; color: #7c3aed; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.05em; }
-.back:hover { color: #a78bfa; }
-.badge { background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3); color: #a78bfa; padding: 0.4rem 1rem; border-radius: 2rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2rem; display: inline-block; }
-h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; margin-bottom: 1rem; background: linear-gradient(135deg, #e8e8f0, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-p { color: #888; font-size: 1.1rem; max-width: 500px; line-height: 1.7; margin-bottom: 2rem; }
-.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin: 0 0.3rem; animation: pulse 1.5s ease-in-out infinite; }
-.dot:nth-child(2) { animation-delay: 0.3s; }
-.dot:nth-child(3) { animation-delay: 0.6s; }
-@keyframes pulse { 0%, 100% { opacity: 0.3; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.2); } }
-</style>
-</head>
-<body>
-<a class="back" href="/thebeizway/">← TheBeizWay</a>
-<span class="badge">Articles</span>
-<h1>Work in Progress</h1>
-<p>Real-world insights on finance, data, and AI automation — written from the desk of a CA who actually builds the tools.</p>
-<div><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-</body>
-</html>
+:root{--bg:#0a0e27;--card:#131a3d;--line:#232c5c;--text:#f4f7fb;--muted:#aab6cc;--cyan:#00d4ff;--grad:linear-gradient(135deg,#00d4ff,#3b82f6 50%,#a855f7)}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.65}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(46rem 26rem at 90% -5%,rgba(168,85,247,.15),transparent 60%)}
+a{color:inherit}.wrap{max-width:980px;margin:0 auto;padding:0 20px;position:relative}
+header{border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.home{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1rem "Space Grotesk";letter-spacing:.06em}.home img{width:32px;height:32px;border-radius:8px}
+header nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:.92rem}
+.hero{padding:56px 0 18px}.eyebrow{font:600 12px Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+h1{font:700 clamp(2rem,5vw,3rem)/1.1 "Space Grotesk";margin:12px 0 14px;letter-spacing:-.02em}h2{font:700 1.3rem "Space Grotesk";margin-bottom:6px}
+p{color:var(--muted)}.lede{font-size:1.08rem;max-width:64ch}
+.list{display:grid;gap:18px;padding:28px 0 64px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}.meta span{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--text)}
+ul{margin:8px 0 0 18px;color:var(--muted)}li{margin:4px 0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.btn{display:inline-flex;min-height:44px;align-items:center;padding:10px 18px;border-radius:10px;border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:.92rem}.btn.p{background:var(--grad);border:0;color:#fff}
+.note{font-size:.85rem;border-left:3px solid #fbbf24;padding-left:12px;margin-top:14px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.86rem}
+@media(max-width:560px){header nav{display:none}}
+</style></head><body>
+<header><div class="wrap"><a class="home" href="/"><img src="/assets/logo-128.png" alt="">THEBEIZWAY</a><nav><a href="/#work">Work</a><a href="/#writing">Writing</a><a href="/about.html">About</a></nav></div></header>
+<main class="wrap"><section class="hero"><p class="eyebrow">Writing</p><h1>Thinking out loud.</h1><p class="lede">Finance, risk, data, AI, governance, and the mindset behind the work. Views are my own and not those of any employer.</p></section><div class="list">
+<article class="item"><h2><a href="/projects/ca-gaicd/ai-governance/index.html" style="text-decoration:none">AI Governance Best Practices</a></h2><div class="meta"><span>AI governance</span><span>Boards</span></div><p>What boards and executives should actually ask before AI touches their numbers.</p><div class="btns"><a class="btn p" href="/projects/ca-gaicd/ai-governance/index.html">Read</a></div></article>
+<article class="item"><h2><a href="/articles/kapooka.html" style="text-decoration:none">The Kapooka Days</a></h2><div class="meta"><span>Resilience</span><span>Army</span></div><p>Army recruit training, a stutter and what it taught me about not quitting.</p><div class="btns"><a class="btn p" href="/articles/kapooka.html">Read</a></div></article>
+</div></main><footer><div class="wrap">&copy; 2026 TheBeizWay · Purav Mehta · <a href="/">Back to home</a></div></footer></body></html>
