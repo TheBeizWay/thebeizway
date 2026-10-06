@@ -5,7 +5,7 @@
 <h1 align="center">Purav Mehta · CA · GAICD</h1>
 
 <p align="center">
-  Chartered Accountant in Canberra. I run governance and reporting across a 55-project ICT portfolio in the Australian Public Service, and build the Power Platform and AI tooling behind it.
+  Chartered Accountant, GAICD, Data and AI solutions in Australia
 </p>
 
 <p align="center">
