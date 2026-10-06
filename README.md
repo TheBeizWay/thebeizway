@@ -21,6 +21,7 @@
 | Project | What it is | Built with |
 |---|---|---|
 | [ask-purav](https://github.com/TheBeizWay/ask-purav) | Career Q&A assistant for recruiters, answering only from my CV, with guardrails on what it won't share. Live at [ask-purav-mehta.netlify.app](https://ask-purav-mehta.netlify.app). | Netlify Functions, Claude API, JavaScript |
+| [n8n-finance-workflows](https://github.com/TheBeizWay/n8n-finance-workflows) | n8n workflow that runs five checks on supplier bills (duplicates, changed bank details, approval limit, new supplier, price rises) and holds risky ones for a person. Tested, synthetic data. | n8n, JavaScript |
 | [thebeizway](https://github.com/TheBeizWay/thebeizway) | Source for my personal site. | HTML, CSS, GitHub Pages |
 
 ### Tools I use
