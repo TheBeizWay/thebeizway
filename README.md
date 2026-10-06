@@ -21,7 +21,6 @@
 | Project | What it is | Built with |
 |---|---|---|
 | [ask-purav](https://github.com/TheBeizWay/ask-purav) | Career Q&A assistant for recruiters, answering only from my CV, with guardrails on what it won't share. Live at [ask-purav-mehta.netlify.app](https://ask-purav-mehta.netlify.app). | Netlify Functions, Claude API, JavaScript |
-| [finance-portfolio](https://github.com/TheBeizWay/finance-portfolio) | Financial cost intelligence model: risk-adjusted budgets and variance analysis. | Python, pandas |
 | [thebeizway](https://github.com/TheBeizWay/thebeizway) | Source for my personal site. | HTML, CSS, GitHub Pages |
 
 ### Tools I use
@@ -37,7 +36,7 @@ Source for [thebeizway.com.au](https://thebeizway.com.au), plain HTML and CSS ho
 
 - `index.html`: home
 - `about.html`, `mindset.html`: story and education
-- `projects/`: data science, AI automation, financial modelling and governance work
+- `projects/`: governance and AI automation work
 - `articles/`: writing
 
 </details>
